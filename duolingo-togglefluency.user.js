@@ -123,13 +123,6 @@ function initToggleFluency(){
     inject(setCookie);
     var fluencyvisible=getCookie("fluencyhidden");
 
-    // Set up custom styles
-    custom_style = document.createElement('style');
-    custom_style.textContent = "#togglefluency{margin-left:10px}" +
-        ".icon.sad-face{width:27px;height:25px;background-position:-301px -54px;background-size:1300px;margin:-6px 8px -3px -6px;}" +
-        ".icon.happy-face{width:27px;height:25px;background-position:-359px -54px;background-size:1300px;margin:-6px 8px -3px -6px;}";
-    document.head.appendChild(custom_style);
-
     // Set initial button text
     var btnText ="Hide fluency";
     if (fluencyvisible=="yes") {
@@ -150,6 +143,13 @@ function initToggleFluency(){
             toggleIcon();
         }
     }, 500);
+
+    // Set up custom styles
+    custom_style = document.createElement('style');
+    custom_style.textContent = "#togglefluency{margin-left:10px}" +
+        ".icon.sad-face{width:27px;height:25px;background-position:-301px -54px;background-size:1300px;margin:-6px 8px -3px -6px;}" +
+        ".icon.happy-face{width:27px;height:25px;background-position:-359px -54px;background-size:1300px;margin:-6px 8px -3px -6px;}";
+    document.head.appendChild(custom_style);
 
     // Set up toggle button
     var toggleButton =
