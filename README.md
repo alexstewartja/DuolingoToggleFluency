@@ -37,3 +37,6 @@ Follow the uninstall steps for the browser/extension you're using:
 
 ### Future Plans
 - Replace fluency display with an auto-scroll carousel of "mini-flashcards"
+
+### Questions/Comments
+- Join the disussion [here](http://blog.alexstew.com/original/scripts/userscripts/duolingo-toggle-fluency-percentage)
