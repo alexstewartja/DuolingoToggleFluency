@@ -16,6 +16,27 @@ Userscript for [Duolingo](https://www.duolingo.com/) that allows users to conven
 ### Usage
 
 - On your Duolingo homepage, the toggle button will appear to the right of the "Lingot store" button.
-- Use at will
+- Use at will and enjoy the convenience.
 
 ### How To Uninstall
+Follow the uninstall steps for the browser/extension you're using:
+- Chrome/Chromium: [Tampermonkey](http://tampermonkey.net/faq.php?ext=dhdg#Q100)
+- Firefox: [Greasemonkey](http://wiki.greasespot.net/Greasemonkey_Manual:Script_Management)
+- Safari: [JavaScript Blocker](http://javascript-blocker.toggleable.com/)
+
+### In Action
+
+- When fluency is visible:
+![fluency_shown](screenshots/fluency_shown.png)
+<br/><br/>
+- When fluency is hidden:
+![fluency_hidden](screenshots/fluency_hidden.png)
+<br/><br/>
+- You will still receive updates after skill completions (the way it should be):
+![fluency_update](screenshots/fluency_update.png)
+
+### Future Plans
+- Replace fluency display with an auto-scroll carousel of "mini-flashcards"
+
+### Questions/Comments?
+- Join the disussion [here](http://blog.alexstew.com/original/scripts/userscripts/duolingo-toggle-fluency-percentage)
