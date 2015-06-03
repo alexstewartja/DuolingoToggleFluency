@@ -1,5 +1,5 @@
 # Duolingo Toggle Fluency Percentage
-Userscript for [Duolingo](https://www.duolingo.com/) that allows user to conveniently show/hide their fluency percentage.
+Userscript for [Duolingo](https://www.duolingo.com/) that allows users to conveniently show/hide their fluency percentage.
 
 ### Installing
 
