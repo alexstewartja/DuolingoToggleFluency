@@ -28,8 +28,10 @@ Follow the uninstall steps for the browser/extension you're using:
 
 - When fluency is visible:
 ![fluency_shown](screenshots/fluency_shown.png)
+<br/><br/>
 - When fluency is hidden:
 ![fluency_hidden](screenshots/fluency_hidden.png)
+<br/><br/>
 - You will still receive updates after skill completions (the way it should be):
 ![fluency_update](screenshots/fluency_update.png)
 
