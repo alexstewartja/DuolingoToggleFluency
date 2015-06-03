@@ -8,5 +8,5 @@ Userscript for [Duolingo](https://www.duolingo.com/) that allows users to conven
  * Chrome/Chromium: [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en)
  * Safari: [JavaScript Blocker](http://javascript-blocker.toggleable.com/)
  * Internet Explorer: Haha!
-2. Click [here](https://github.com/arekolek/DuolingoCourseSwitcher/raw/master/duolingo-course-switcher.user.js) to install the userscript.
-3. Confirm the installation when prompted.
+2. Get the userscript [here](https://raw.githubusercontent.com/alexstewartja/DuolingoToggleFluency/master/duolingo-togglefluency.user.js?duo).
+3. When prompted, confirm installation.
