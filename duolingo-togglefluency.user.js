@@ -46,7 +46,8 @@ onHomeAdded.lastObserver = { // Disconnect safely to prevent erroneous behavior
 };
 new MutationObserver(onHomeAdded).observe(document.body, {childList: true});
 
-if (location.pathname === '/' ) {
+// Are we at home or in the store? Yes? Launch the main method
+if (location.pathname === '/' || location.pathname === '/show_store') {
     main();
 }
 
