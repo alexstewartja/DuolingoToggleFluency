@@ -25,6 +25,14 @@ Follow the uninstall steps for the browser/extension you're using:
 - Safari: [JavaScript Blocker](http://javascript-blocker.toggleable.com/)
 
 ### In Action
-When fluency is visible:<br>
+
+When fluency is visible:
+<br>
+![fluency_shown](screenshots/fluency_shown.png)
+<br>
+When fluency is hidden:
+<br>
+![fluency_hidden](screenshots/fluency_hidden.png)
+<br>
 
 
