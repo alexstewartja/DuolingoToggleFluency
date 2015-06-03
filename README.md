@@ -35,4 +35,5 @@ Follow the uninstall steps for the browser/extension you're using:
 - You will still receive updates after skill completions (the way it should be):
 ![fluency_update](screenshots/fluency_update.png)
 
-
+### Future Plans
+- Replace fluency display with an auto-scroll carousel of "mini-flashcards"
