@@ -11,7 +11,7 @@ Userscript for [Duolingo](https://www.duolingo.com/) that allows users to conven
 2. Get the userscript [here](https://raw.githubusercontent.com/alexstewartja/DuolingoToggleFluency/master/duolingo-togglefluency.user.js?duo).
 3. When prompted, confirm installation.
 
-<b>Please note that [cookies](http://en.wikipedia.org/wiki/HTTP_cookie) are uitlized for the script to function as expected. Clearing browser data may affect experience.<b>
+<b>Please note that [cookies](http://en.wikipedia.org/wiki/HTTP_cookie) are uitlized for the script to function as expected. Clearing browser data may affect experience.</b>
 
 ### Usage
 
