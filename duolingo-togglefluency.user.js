@@ -4,6 +4,7 @@
 // @description  Userscript for Duolingo that allows user to conveniently show/hide their fluency percentage.
 // @author       alexstewartja
 // @match        https://www.duolingo.com/*
+// @grant        none
 // @copyright    2015, Alex Stewart
 // @version     1.2
 // @updateURL       https://raw.githubusercontent.com/alexstewartja/DuolingoToggleFluency/master/duolingo-togglefluency.meta.js?duo
