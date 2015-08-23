@@ -98,7 +98,7 @@ function toggleIcon() {
 
 // Toggle away!
 function fireToggle(){
-    $(".icon.icon-fluency-score").parent().parent().toggle();
+    $(".icon.fluency-score-shield").parent().parent().toggle();
     $("#togglefluency").text(function(i, text){
         if(text === "Hide fluency")
         {
