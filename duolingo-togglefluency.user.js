@@ -4,8 +4,9 @@
 // @description  Userscript for Duolingo that allows user to conveniently show/hide their fluency percentage.
 // @author       alexstewartja
 // @match        https://www.duolingo.com/*
+// @grant        none
 // @copyright    2015, Alex Stewart
-// @version     1.2
+// @version     1.4
 // @updateURL       https://raw.githubusercontent.com/alexstewartja/DuolingoToggleFluency/master/duolingo-togglefluency.meta.js?duo
 // @downloadURL     https://raw.githubusercontent.com/alexstewartja/DuolingoToggleFluency/master/duolingo-togglefluency.user.js?duo
 // ==/UserScript==
@@ -97,7 +98,7 @@ function toggleIcon() {
 
 // Toggle away!
 function fireToggle(){
-    $(".icon.icon-fluency-score").parent().parent().toggle();
+    $(".icon.fluency-score-shield").parent().parent().toggle();
     $("#togglefluency").text(function(i, text){
         if(text === "Hide fluency")
         {
@@ -122,28 +123,28 @@ function initToggleFluency(){
     inject(fireToggle);
     inject(getCookie);
     inject(setCookie);
-    var fluencyvisible=getCookie("fluencyhidden");
+    var fluencyhidden = getCookie("fluencyhidden");
 
     // Set initial button text
     var btnText ="Hide fluency";
-    if (fluencyvisible=="yes") {
+    if (fluencyhidden == "yes") {
         btnText = "Show fluency";
     }
 
     // Keep current. Stay relevant
-    tic_toc = window.setInterval(function(){
-        var mainfluencyvisible=getCookie("fluencyhidden");
+    tic_toc = window.setTimeout(function () {
+        var mainfluencyhidden = getCookie("fluencyhidden");
 
         if(duo.view === "home"){
-            if (mainfluencyvisible=="yes") {
-                $(".icon.icon-fluency-score").parent().parent().hide();
+            if (mainfluencyhidden == "yes") {
+                $(".icon.fluency-score-shield").parent().parent().hide();
                 btnText = "Show fluency";
             }else {
-                $(".icon.icon-fluency-score").parent().parent().show();
+                $(".icon.fluency-score-shield").parent().parent().show();
             }
             toggleIcon();
         }
-    }, 500);
+    }, 100);
 
     // Set up custom styles
     custom_style = document.createElement('style');
