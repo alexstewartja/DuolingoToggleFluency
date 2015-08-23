@@ -6,7 +6,7 @@
 // @match        https://www.duolingo.com/*
 // @grant        none
 // @copyright    2015, Alex Stewart
-// @version     1.2
+// @version     1.3
 // @updateURL       https://raw.githubusercontent.com/alexstewartja/DuolingoToggleFluency/master/duolingo-togglefluency.meta.js?duo
 // @downloadURL     https://raw.githubusercontent.com/alexstewartja/DuolingoToggleFluency/master/duolingo-togglefluency.user.js?duo
 // ==/UserScript==
