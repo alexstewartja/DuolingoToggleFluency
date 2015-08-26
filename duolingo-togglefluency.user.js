@@ -6,7 +6,7 @@
 // @match        https://www.duolingo.com/*
 // @grant        none
 // @copyright    2015, Alex Stewart
-// @version     1.5
+// @version     1.7
 // @updateURL       https://raw.githubusercontent.com/alexstewartja/DuolingoToggleFluency/master/duolingo-togglefluency.meta.js?duo
 // @downloadURL     https://raw.githubusercontent.com/alexstewartja/DuolingoToggleFluency/master/duolingo-togglefluency.user.js?duo
 // ==/UserScript==
@@ -43,7 +43,8 @@ function onHomeAdded(mutations) {
     }
 }
 onHomeAdded.lastObserver = { // Disconnect safely to prevent erroneous behavior
-    disconnect: function() {}
+    disconnect: function () {
+    }
 };
 new MutationObserver(onHomeAdded).observe(document.body, {childList: true});
 
@@ -65,18 +66,18 @@ function inject(f) {
 // Yum!
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires="+d.toUTCString();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toUTCString();
     document.cookie = cname + "=" + cvalue + "; " + expires;
 }
 
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
+    for (var i = 0; i < ca.length; i++) {
         var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
-        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+        while (c.charAt(0) == ' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
     }
     return "";
 }
@@ -97,15 +98,14 @@ function toggleIcon() {
 }
 
 // Toggle away!
-function fireToggle(){
-    $(".icon.fluency-score-shield").parent().parent().toggle();
-    $("#togglefluency").text(function(i, text){
-        if(text === "Hide fluency")
-        {
+function fireToggle() {
+    whichShield().parent().parent().toggle();
+    $("#togglefluency").text(function (i, text) {
+        if (text === "Hide fluency") {
             setCookie("fluencyhidden", "yes", 365);
             setCookie("mood", "happy", 365);
-        }else{
-            if(text==="Show fluency"){
+        } else {
+            if (text === "Show fluency") {
                 setCookie("fluencyhidden", "no", 365);
                 setCookie("mood", "sad", 365);
             }
@@ -115,10 +115,20 @@ function fireToggle(){
     toggleIcon();
 }
 
+// Determine which shield is shown in the DOM
+function whichShield() {
+    var goldShield = $(".icon.fluency-score-shield");
+    var silverShield = $(".icon.fluency-score-shield-silver");
+    if (goldShield.length === 0) {
+        return silverShield;
+    }
+    return goldShield;
+}
 
 // Initialize
-function initToggleFluency(){
+function initToggleFluency() {
     // Administer injections. This will only sting a little
+    inject(whichShield);
     inject(toggleIcon);
     inject(fireToggle);
     inject(getCookie);
@@ -126,7 +136,7 @@ function initToggleFluency(){
     var fluencyhidden = getCookie("fluencyhidden");
 
     // Set initial button text
-    var btnText ="Hide fluency";
+    var btnText = "Hide fluency";
     if (fluencyhidden == "yes") {
         btnText = "Show fluency";
     }
@@ -135,11 +145,11 @@ function initToggleFluency(){
     tic_toc = window.setTimeout(function () {
         var mainfluencyhidden = getCookie("fluencyhidden");
 
-        if(duo.view === "home"){
+        if (duo.view === "home") {
             if (mainfluencyhidden == "yes") {
                 $(".icon.fluency-score-shield").parent().parent().hide();
                 btnText = "Show fluency";
-            }else {
+            } else {
                 $(".icon.fluency-score-shield").parent().parent().show();
             }
             toggleIcon();
@@ -155,6 +165,6 @@ function initToggleFluency(){
 
     // Set up toggle button
     var toggleButton =
-        '<button data-tab="toggle_fluency" class="btn btn-standard right store-button btn-store" id="togglefluency" onClick="fireToggle();">'+btnText+'</button>';
+        '<button data-tab="toggle_fluency" class="btn btn-standard right store-button btn-store" id="togglefluency" onClick="fireToggle();">' + btnText + '</button>';
     $(".tree").prepend(toggleButton);
 }
