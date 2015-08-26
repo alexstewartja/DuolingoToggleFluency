@@ -147,10 +147,10 @@ function initToggleFluency() {
 
         if (duo.view === "home") {
             if (mainfluencyhidden == "yes") {
-                $(".icon.fluency-score-shield").parent().parent().hide();
+                whichShield().parent().parent().hide();
                 btnText = "Show fluency";
             } else {
-                $(".icon.fluency-score-shield").parent().parent().show();
+                whichShield().parent().parent().show();
             }
             toggleIcon();
         }
